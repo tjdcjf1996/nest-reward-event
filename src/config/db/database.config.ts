@@ -10,6 +10,8 @@ export const mongoURI = {
 
     return {
       uri: `mongodb://${MONGO_USER}:${MONGO_PASS}@${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`,
+      maxPoolSize: 10,
+      minPoolSize: 5,
     };
   },
   inject: [ConfigService],
